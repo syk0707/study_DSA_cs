@@ -6,7 +6,7 @@ namespace study_DSA_cs
     {
         static void Main(string[] args)
         {
-            sort.programmers._42746();
+            implementation.Baekjoon._1032();
         }
     }
 }
