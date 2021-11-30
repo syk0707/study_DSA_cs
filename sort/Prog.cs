@@ -69,10 +69,7 @@ namespace study_DSA_cs.sort
         public static void _12977()
         {
             int[] nums = new int[5] { 1, 2, 7, 6, 4 };
-            //var sortNum = nums.OrderBy(num => num).ToList();
-            //int maxNum = sortNum[nums.Length - 1];
             var caseList = GetCombinations<int>(nums, 3);
-            //Console.WriteLine(JsonSerializer.Serialize(sortNum));
             int answer = 0;
             foreach(var caseItem in caseList)
             {
