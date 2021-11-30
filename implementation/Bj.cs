@@ -7,7 +7,7 @@ using System.Text.Json;
 
 namespace study_DSA_cs.implementation
 {
-    public class Baekjoon
+    public class Bj
     {
         public static void _1032()
         {

@@ -6,7 +6,7 @@ namespace study_DSA_cs
     {
         static void Main(string[] args)
         {
-            implementation.Baekjoon._1032();
+            implementation.Bj._1032();
         }
     }
 }

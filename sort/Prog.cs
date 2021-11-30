@@ -5,7 +5,7 @@ using System.Text;
 
 namespace study_DSA_cs.sort
 {
-    public class Programmers
+    public class Prog
     {
         public static void _42746()
         {
