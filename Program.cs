@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace study_DSA_cs
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            implementation.Bj._1032();
-        }
+        study_DSA_cs.brute_force.Bj._4641();
     }
 }
