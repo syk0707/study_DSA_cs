@@ -88,5 +88,30 @@ namespace study_DSA_cs.sort
             }
             Console.WriteLine(answer);
         }
+
+        public static void _42747()
+        {
+            int[] citations = new int[5] {10, 10, 10, 10, 10};
+            int answer = 0;
+            citations = citations.OrderByDescending(c => c).ToArray();
+            int totCnt = 0;
+            Console.WriteLine(JsonSerializer.Serialize(citations));
+            for (var i = 0; i < citations.Length; i++)
+            {
+                Console.WriteLine(citations[i]);
+                Console.WriteLine(i + 1);
+                Console.WriteLine("--------");
+                if (citations[i] < i + 1)
+                {
+                    answer = i;
+                    break;
+                }
+                if (i == citations.Length - 1 && citations[i] > 0)
+                    answer = citations.Length;
+            }
+
+            Console.WriteLine(answer);
+            Console.ReadLine();
+        }
     }
 }
