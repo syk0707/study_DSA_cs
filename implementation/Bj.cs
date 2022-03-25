@@ -32,5 +32,19 @@ namespace study_DSA_cs.implementation
             }
             Console.WriteLine(string.Join("", compareList));
         }
+
+        public static void _2441()
+        {
+            var inputNum = Console.ReadLine();
+            if (Int32.TryParse(inputNum, out int totNum))
+            {
+                for (var i = totNum; i > 0; i--)
+                {
+                    Console.Write(new string(' ', totNum - i));
+                    Console.WriteLine(new string('*', i));
+                }
+            }
+
+        }
     }
 }
