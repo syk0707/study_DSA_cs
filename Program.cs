@@ -8,6 +8,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        study_DSA_cs.implementation.Bj._2441();
+        study_DSA_cs.math.Bj._11816();
     }
 }
