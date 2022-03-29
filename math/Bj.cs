@@ -27,5 +27,29 @@ namespace study_DSA_cs.math
                 Console.WriteLine(testNum);
             }
         }
+
+        public static void _5086()
+        {
+            while (true)
+            {
+                var input_num = Console.ReadLine();
+                if (input_num == "0 0") break;
+                var input_array = input_num.Split(' ');
+                var first_num = Int32.Parse(input_array[0]);
+                var second_num = Int32.Parse(input_array[1]);
+                if (first_num > second_num && first_num % second_num == 0)
+                {
+                    Console.WriteLine("multiple");
+                }
+                else if (second_num > first_num && second_num % first_num == 0)
+                {
+                    Console.WriteLine("factor");
+                }
+                else
+                {
+                    Console.WriteLine("neither");
+                }
+            }
+        }
     }
 }

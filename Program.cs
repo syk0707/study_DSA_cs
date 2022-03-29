@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class Program
+namespace study_DSA_cs
 {
-    static void Main(string[] args)
+    class Program
     {
-        study_DSA_cs.math.Bj._11816();
+        static void Main(string[] args)
+        {
+            study_DSA_cs.math.Bj._5086();
+        }
     }
 }
