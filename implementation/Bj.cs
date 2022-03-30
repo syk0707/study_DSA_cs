@@ -46,5 +46,30 @@ namespace study_DSA_cs.implementation
             }
 
         }
+
+        public static void _23746()
+        {
+            var totIdx = Console.ReadLine();
+            if (Int32.TryParse(totIdx, out int totNum))
+            {
+                Dictionary<string, string> caseDic = new Dictionary<string, string>();
+                for (var i = 0; i < totNum; i++)
+                {
+                    var input_arr = Console.ReadLine().Split(" ");
+                    caseDic[input_arr[1]] = input_arr[0];
+                }
+
+                var caseStr = Console.ReadLine();
+                string convertStr = string.Empty;
+                foreach (var caseChar in caseStr)
+                {
+                    convertStr += caseDic[caseChar.ToString()];
+                }
+
+                var caseIdxArr = Console.ReadLine().Split(" ");
+                Console.WriteLine(convertStr.Substring(Int32.Parse(caseIdxArr[0]) - 1, Int32.Parse(caseIdxArr[1]) - Int32.Parse(caseIdxArr[0]) + 1));
+                Console.ReadLine();
+            }
+        }
     }
 }
