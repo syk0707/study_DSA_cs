@@ -51,5 +51,26 @@ namespace study_DSA_cs.math
                 }
             }
         }
+
+        public static void _14916()
+        {
+            var numStr = Console.ReadLine();
+            if (Int32.TryParse(numStr, out int num))
+            {
+                var quotient = num % 5;
+                if (num == 1 || num == 3)
+                {
+                    Console.WriteLine(-1);
+                }
+                if (quotient % 2 == 0)
+                {
+                    Console.WriteLine(Math.Truncate((double)num / 5) + Math.Truncate((double)quotient / 2));
+                }
+                else
+                {
+                    Console.WriteLine(Math.Truncate((double)num / 5) - 1 + Math.Truncate((double)(quotient + 5) / 2));
+                }
+            }
+        }
     }
 }
