@@ -62,7 +62,7 @@ namespace study_DSA_cs.math
                 {
                     Console.WriteLine(-1);
                 }
-                if (quotient % 2 == 0)
+                else if (quotient % 2 == 0)
                 {
                     Console.WriteLine(Math.Truncate((double)num / 5) + Math.Truncate((double)quotient / 2));
                 }
