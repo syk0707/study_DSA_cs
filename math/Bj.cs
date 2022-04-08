@@ -8,6 +8,27 @@ namespace study_DSA_cs.math
 {
     public class Bj
     {
+        public static long getLCM(long a, long b)
+        {
+            long num1, num2;
+            if (a > b)
+            {
+                num1 = a; num2 = b;
+            }
+            else
+            {
+                num1 = b; num2 = a;
+            }
+
+            for (long i = 1; i <= num2; i++)
+            {
+                if ((num1 * i) % num2 == 0)
+                {
+                    return i * num1;
+                }
+            }
+            return num2;
+        }
         public static void _11816()
         {
             string testNum = Console.ReadLine();
@@ -71,6 +92,14 @@ namespace study_DSA_cs.math
                     Console.WriteLine(Math.Truncate((double)num / 5) - 1 + Math.Truncate((double)(quotient + 5) / 2));
                 }
             }
+        }
+
+        public static void _13241()
+        {
+            var inputArr = Console.ReadLine().Split(' ');
+            var firstNum = Int64.Parse(inputArr[0]);
+            var secondNum = Int64.Parse(inputArr[1]);
+            Console.WriteLine(getLCM(firstNum, secondNum));
         }
     }
 }
