@@ -57,5 +57,23 @@ namespace study_DSA_cs.greedy
                 Console.WriteLine("I hate UCPC");
             }
         }
+
+        public static void _19564()
+        {
+            var inputStr = Console.ReadLine();
+            var inputBytes = Encoding.ASCII.GetBytes(inputStr);
+            int totalCnt = 1;
+            int beforeNum = 0;
+            foreach (var inputAscii in inputBytes)
+            {
+                if (inputAscii <= beforeNum)
+                {
+                    totalCnt++;
+                }
+                beforeNum = inputAscii;
+            }
+            Console.WriteLine(totalCnt);
+            Console.ReadLine();
+        }
     }
 }
