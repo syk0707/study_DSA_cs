@@ -67,5 +67,32 @@ namespace study_DSA_cs.@string
                 }
             }
         }
+
+        public static void _3062()
+        {
+            int totIdx = Int32.Parse(Console.ReadLine());
+            for (var idx = 0; idx < totIdx; idx++)
+            {
+                var numStr = Console.ReadLine();
+                var sum = Int32.Parse(numStr) + Int32.Parse(ReverseWithStringCreate(numStr));
+                if (string.Equals(sum.ToString(), ReverseWithStringCreate(sum.ToString())))
+                {
+                    Console.WriteLine("YES");
+                }
+                else
+                {
+                    Console.WriteLine("NO");
+                }
+            }
+        }
+
+        public static string ReverseWithStringCreate(string input)
+        {
+            return string.Create(input.Length, input, (chars, state) =>
+            {
+                state.AsSpan().CopyTo(chars);
+                chars.Reverse();
+            });
+        }
     }
 }
