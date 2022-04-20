@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace study_DSA_cs.@string
@@ -83,6 +84,32 @@ namespace study_DSA_cs.@string
                 {
                     Console.WriteLine("NO");
                 }
+            }
+        }
+
+        public static void _3059()
+        {
+            var totNum = Int32.Parse(Console.ReadLine());
+            for (var idx = 0; idx < totNum; idx++)
+            {
+                Dictionary<char, bool> alphabetDic = new Dictionary<char, bool>();
+                for (char letter = 'A'; letter <= 'Z'; letter++)
+                {
+                    alphabetDic[letter] = false;
+                }
+                var inputStr = Console.ReadLine();
+                foreach (var inputChar in inputStr)
+                {
+                    alphabetDic[inputChar] = true;
+                }
+
+                int totSum = 0;
+                var falseKeyValuePairs = alphabetDic.Where(x => x.Value == false);
+                foreach (var keyValuePair in falseKeyValuePairs)
+                {
+                    totSum += (int)keyValuePair.Key;
+                }
+                Console.WriteLine(totSum);
             }
         }
 
