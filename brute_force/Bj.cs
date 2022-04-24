@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 /// <summary>
@@ -34,6 +35,44 @@ namespace study_DSA_cs.brute_force
                 }
                 Console.WriteLine(tot_num);
             }
+        }
+
+        public static void _1816()
+        {
+            var totIdx = Int32.Parse(Console.ReadLine());
+            for (var idx = 0; idx < totIdx; idx++)
+            {
+                var checkNum = long.Parse(Console.ReadLine());
+                var list = getFactorizationList(checkNum);
+                if (list.Count > 0)
+                {
+                    Console.WriteLine("NO");
+                }
+                else
+                {
+                    Console.WriteLine("YES");
+                }
+            }
+        }
+
+        static List<long> getFactorizationList(long number)
+        {
+            List<long> primes = new List<long>();
+
+            for (long i = 2; i <= Math.Pow(10, 6);)
+            {
+                if (number % i == 0)
+                {
+                    primes.Add(i);
+                    break;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+
+            return primes;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace study_DSA_cs
     {
         static void Main(string[] args)
         {
-            study_DSA_cs.@string.Bj._3059();
+            study_DSA_cs.brute_force.Bj._1816();
         }
     }
 }
