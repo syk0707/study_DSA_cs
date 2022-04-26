@@ -10,7 +10,10 @@ namespace study_DSA_cs
     {
         static void Main(string[] args)
         {
-            study_DSA_cs.brute_force.Bj._1816();
+            string[] id_list = new string[] {"muzi", "frodo", "apeach", "neo"};
+            string[] report = new string[] { "muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi" };
+            int k = 2;
+            study_DSA_cs.@string.Prog._92334(id_list, report, k);
         }
     }
 }

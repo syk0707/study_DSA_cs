@@ -7,7 +7,4 @@
   <ItemGroup>
     <None Remove="string\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="string\" />
-  </ItemGroup>
 </Project>
