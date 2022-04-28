@@ -71,5 +71,27 @@ namespace study_DSA_cs.implementation
                 Console.ReadLine();
             }
         }
+
+        public static void _4592()
+        {
+            while (true)
+            {
+                var sentence = Console.ReadLine();
+                if (sentence.Equals("0", StringComparison.InvariantCultureIgnoreCase)) break;
+
+                var wordList = sentence.Split(' ');
+                var beforeWord = "";
+                for (var i = 1; i < wordList.Length; i++)
+                {
+                    if (!beforeWord.Equals(wordList[i]))
+                    {
+                        Console.Write($"{wordList[i]} ");
+                        beforeWord = wordList[i];
+                    }
+                }
+                Console.Write("$");
+                Console.WriteLine();
+            }
+        }
     }
 }
