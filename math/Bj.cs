@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace study_DSA_cs.math
@@ -100,6 +102,27 @@ namespace study_DSA_cs.math
             var firstNum = Int64.Parse(inputArr[0]);
             var secondNum = Int64.Parse(inputArr[1]);
             Console.WriteLine(getLCM(firstNum, secondNum));
+        }
+
+        public static void _2576()
+        {
+            var inputArr = new List<int>();
+            IEnumerable<int> ranges = Enumerable.Range(1, 7);
+            foreach(var range in ranges)
+            {
+                var num = Int32.Parse(Console.ReadLine());
+                if (num % 2 == 1)
+                    inputArr.Add(num);
+            }
+            if (inputArr.Count == 0)
+            {
+                Console.WriteLine("-1");
+            }
+            else
+            {
+                Console.WriteLine(inputArr.Sum());
+                Console.WriteLine(inputArr[0]);
+            }
         }
     }
 }
