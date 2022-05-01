@@ -120,6 +120,7 @@ namespace study_DSA_cs.math
             }
             else
             {
+                inputArr.Sort();
                 Console.WriteLine(inputArr.Sum());
                 Console.WriteLine(inputArr[0]);
             }
