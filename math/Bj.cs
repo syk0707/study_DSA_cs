@@ -125,5 +125,15 @@ namespace study_DSA_cs.math
                 Console.WriteLine(inputArr[0]);
             }
         }
+
+        public static void _5347()
+        {
+            var totNum = Int32.Parse(Console.ReadLine());
+            foreach (var idx in Enumerable.Range(1, totNum))
+            {
+                var inputArr = Console.ReadLine().Split(' ');
+                Console.WriteLine(getLCM(long.Parse(inputArr[0]), long.Parse(inputArr[1])));
+            }
+        }
     }
 }
