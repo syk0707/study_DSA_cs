@@ -31,6 +31,18 @@ namespace study_DSA_cs.math
             }
             return num2;
         }
+
+        public static long getGCD(long a, long b)
+        {
+            while (a != 0 && b != 0)
+            {
+                if (a > b) a %= b;
+                else b %= a;
+            }
+            // OR
+            return a | b;
+        }
+
         public static void _11816()
         {
             string testNum = Console.ReadLine();
@@ -134,6 +146,21 @@ namespace study_DSA_cs.math
                 var inputArr = Console.ReadLine().Split(' ');
                 Console.WriteLine(getLCM(long.Parse(inputArr[0]), long.Parse(inputArr[1])));
             }
+        }
+
+        public static void _1850()
+        {
+            var inputList = Console.ReadLine().Split(' ');
+            //string firstNum = string.Concat(Enumerable.Repeat("1", Int32.Parse(inputList[0])));
+            //string secondNum = string.Concat(Enumerable.Repeat("1", Int32.Parse(inputList[1])));
+
+            long a = Int64.Parse(inputList[0]);
+            long b = Int64.Parse(inputList[1]);
+
+            long gcd = getGCD(Math.Max(a, b), Math.Min(a, b));
+            StringBuilder sb = new StringBuilder();
+            for (int i = 1; i <= gcd; i++) sb.Append("1");
+            Console.WriteLine(sb.ToString());
         }
     }
 }
