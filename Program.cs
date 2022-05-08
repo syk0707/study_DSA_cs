@@ -10,7 +10,7 @@ namespace study_DSA_cs
     {
         static void Main(string[] args)
         {
-            study_DSA_cs.math.Bj._1850();
+            study_DSA_cs.heap.Bj._1927();
         }
     }
 }
