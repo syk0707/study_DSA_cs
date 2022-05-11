@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace study_DSA_cs.sort
 {
@@ -28,6 +30,39 @@ namespace study_DSA_cs.sort
             var sortDic = from entry in studentDic orderby entry.Value descending, entry.Key ascending select entry;
             
             Console.WriteLine($"{sortDic.First().Key} {sortDic.First().Value}");
+        }
+
+        public static void _10816()
+        {
+            var totCardIdx = Int32.Parse(Console.ReadLine());
+            Dictionary<string, int> cardDic = new Dictionary<string, int>();
+            var cardNumArr = Console.ReadLine().Split(' ');
+            foreach (var cardNum in cardNumArr)
+            {
+                if (cardDic.ContainsKey(cardNum))
+                {
+                    cardDic[cardNum] += 1;
+                }
+                else
+                {
+                    cardDic[cardNum] = 1;
+                }
+            }
+            var totCardNumIdx = Int32.Parse(Console.ReadLine());
+            var checkCardNumArr = Console.ReadLine().Split(' ');
+            StringBuilder sb = new StringBuilder();
+            foreach (var checkCardNum in checkCardNumArr)
+            {
+                if (cardDic.ContainsKey(checkCardNum))
+                {
+                    sb.Append(cardDic[checkCardNum]);
+                }
+                else
+                {
+                    sb.Append(0);
+                }
+            }
+            Console.Write(sb.ToString());
         }
     }
 }
